@@ -1,0 +1,21 @@
+<div class="col-lg-12">
+  <div class="card mt-5 mb-5">
+    <div class="card-body">
+      <h2 class="text-center">Send Reset Password Link</h2>
+    </div>
+  </div>
+</div>
+
+
+<%= form_tag user_reset_path, method: :post do %>
+<%= content_tag :div, class: 'my-div', style: 'border: solid black 2px;width:50%;height:300px;margin-left: 25%;background-color:#d0caed  ' do %>
+<div class="form-row" style="margin-left: 30%; margin-top:15%">
+  <label for="email">Email:</label>
+  <%= text_field_tag :email %>
+</div>
+<div class="form-row" style="text-align:center; margin-top:12%">
+  <%= submit_tag "Send Email" %>
+  </div>
+<% end %>
+<% end %>
+
