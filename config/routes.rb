@@ -14,6 +14,9 @@ Rails.application.routes.draw do
  
   get '/user/list/:page', to: 'users#allUser'
 
+  get '/user/list', to: 'users#allUser'
+
+
   delete '/user/delete/:id', to: 'users#delete_user'
 
   get '/user/delete/:id', to: 'users#delete_user'

@@ -1,6 +1,10 @@
 class User < ApplicationRecord
     validates :username, :email, presence: true, uniqueness: true
     has_secure_password
+
+    def name
+      "#{first_name} #{last_name}".strip
+    end
   #   before_save :ensure_password_confirmation
 
 
