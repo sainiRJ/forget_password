@@ -1,23 +1,38 @@
-<%= form_for @user, url: user_register_path, method: :post do |f| %>
-  <!-- Adjust the fields as needed -->
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-
-  <%= f.submit "Register" %>
-<% end %>
+<div class="col-lg-12">
+  <div class="card mt-5 mb-5">
+    <div class="card-body">
+      <h2 class="text-center">Register New User</h2>
+    </div>
+  </div>
+</div>
+  <%= form_for @user, url: user_register_path, method: :post do |f| %>
+  <%= content_tag :div, class: 'my-div', style: 'border: solid black 2px;width:50%;height:300px;margin-left: 25%;background-color:#d0caed  ' do %>
+  <div class="form-row">
+          <%= f.label :username,  style:'margin-left: 23%; margin-top:2%' %>
+            <%= f.text_field :username,  style:'margin-left: 14%'  %>
+          </div>
+          <div class="form-row">
+          <%= f.label :email,  style:'margin-left: 23%; margin-top:2%'  %>
+            <%= f.email_field :email,  style:'margin-left: 19%'  %>
+          </div>
+          <div class="form-row">
+          <%= f.label :password,  style:'margin-left: 23%; margin-top:2%'  %>
+            <%= f.password_field :password,  style:'margin-left: 15%'  %>
+          </div>
+          <div class="form-row">
+          <%= f.label :password_confirmation,  style:'margin-left: 23%; margin-top:2%'  %>
+            <%= f.password_field :password_confirmation,  style:'margin-left: 0.5%'  %>
+          </div>
+          <div class="form-row">
+          <%= f.label :first_name,  style:'margin-left: 23%; margin-top:2%'  %>
+            <%= f.text_field :first_name ,  style:'margin-left: 14%' %>
+          </div>
+          <div class="form-row">
+          <%= f.label :last_name ,  style:'margin-left: 23%; margin-top:2%' %>
+            <%= f.text_field :last_name ,  style:'margin-left: 14%' %>
+          </div>
+          <div class="form-row">
+          <%= f.submit "Register",  style:'margin-left: 23%; margin-top:3%; background-color:black; color:white'  %>
+        </div>
+    <% end %>
+    <% end %>
